@@ -33,10 +33,10 @@ function App() {
       <Skills />
       <Projects />
       <Contact />
-      <footer className="py-8 px-6 border-t border-glass-border">
+      <footer className="py-16 md:py-24 flex items-center justify-center border-t border-glass-border">
         <div className="max-w-6xl mx-auto text-center">
           <p className="font-mono text-sm text-soft-gray">
-            © 2025 Nama Kamu. All rights reserved.
+            © 2026 Dava Ari Ardiansyah. All rights reserved.
           </p>
         </div>
       </footer>
