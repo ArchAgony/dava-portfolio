@@ -107,3 +107,43 @@ body {
     animation: marquee 30s linear infinite;
   }
 }
+
+.certificates-swiper {
+  padding-bottom: 3rem;
+}
+
+.certificates-swiper .swiper-pagination {
+  bottom: 0;
+}
+
+.custom-bullet {
+  width: 12px;
+  height: 12px;
+  background: var(--color-steel-blue);
+  opacity: 0.5;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-bullet-active {
+  opacity: 1;
+  background: var(--color-electric-blue);
+  box-shadow: 0 0 12px var(--color-electric-blue);
+}
+
+.certificates-swiper .swiper-slide {
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.certificates-swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0.4;
+  transform: scale(0.92);
+}
+
+.certificates-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}

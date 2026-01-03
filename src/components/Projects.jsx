@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger)
 function Projects() {
     const sectionRef = useRef(null)
     const cardsRef = useRef([])
+    const titleRef = useRef(null)
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -30,6 +31,22 @@ function Projects() {
                     }
                 )
             })
+
+            gsap.fromTo(
+                titleRef.current,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            )
         }, sectionRef)
 
         return () => ctx.revert()
@@ -60,7 +77,7 @@ function Projects() {
             }}
         >
             <div className="w-full max-w-5xl mx-auto px-4 md:px-6">
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16"
+                <h2 ref={titleRef} className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 md:mb-16"
                     style={{
                         paddingBottom: '10px',
                     }}

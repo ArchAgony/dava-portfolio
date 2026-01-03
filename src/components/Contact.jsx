@@ -74,13 +74,24 @@ function Contact() {
         <section
             ref={sectionRef}
             id="contact"
-            className="py-16 md:py-24 flex items-center justify-center"
+            className="py-20 md:py-28 lg:py-32 flex items-center justify-center relative overflow-hidden"
             style={{
                 paddingTop: '50px',
                 paddingBottom: '50px',
             }}
+
         >
-            <div className="w-full max-w-5xl mx-auto px-4 md:px-6">
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-12 left-[8%] w-8 h-8 md:w-12 md:h-12 border border-electric-blue/20 rounded-lg animate-float" />
+
+                <div className="absolute top-1/4 right-[10%] w-6 h-6 md:w-10 md:h-10 border border-cyan-glow/15 rounded-full animate-float-reverse" />
+
+                <div className="absolute bottom-16 left-[12%] w-5 h-5 md:w-8 md:h-8 bg-electric-blue/10 rotate-45 animate-float" />
+
+                <div className="absolute bottom-1/4 right-[8%] w-10 h-10 md:w-14 md:h-14 border border-steel-blue/20 rounded-full animate-float-reverse" />
+            </div>
+
+            <div className="w-full max-w-5xl mx-auto px-4 md:px-6 relative z-10">
                 <div className="flex flex-col items-center text-center">
                     <h2
                         ref={titleRef}
@@ -110,6 +121,7 @@ function Contact() {
                                 style={{
                                     padding: '10px',
                                 }}
+
                             >
                                 <social.icon className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 text-soft-gray group-hover:text-cyan-glow transition-colors duration-300" />
                                 <span className="font-mono text-xs md:text-sm text-soft-gray group-hover:text-off-white transition-colors duration-300">
