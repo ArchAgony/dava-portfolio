@@ -66,7 +66,7 @@ function Certificates() {
         },
         {
             id: 3,
-            title: 'Judul Sertifikat 3',
+            title: 'null',
             image: null,
         },
     ]
@@ -136,7 +136,7 @@ function Certificates() {
                                                 className="w-full h-full object-cover"
                                             />
                                         ) : (
-                                            <span className="font-mono text-soft-gray text-sm">Gambar Sertifikat</span>
+                                            <span className="font-mono text-soft-gray text-sm">null</span>
                                         )}
                                         <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                     </div>
