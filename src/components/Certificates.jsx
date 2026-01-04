@@ -7,6 +7,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import Certi1 from '../assets/certi1.jpg'
 import Certi2 from '../assets/certi2.jpg'
+import Certi3 from '../assets/certi3.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -66,8 +67,8 @@ function Certificates() {
         },
         {
             id: 3,
-            title: 'null',
-            image: null,
+            title: 'Peserta Lomba Matematika UNISMA',
+            image: Certi3,
         },
     ]
 

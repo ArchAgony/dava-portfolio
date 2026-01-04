@@ -86,7 +86,7 @@ function Hero() {
                             paddingBottom: '10px',
                         }}
                     >
-                        Web Developer & UI Enthusiast
+                        Web Developer & UI/UX Designer
                     </p>
 
                     <div ref={ctaRef} className="mt-10 md:mt-12">
