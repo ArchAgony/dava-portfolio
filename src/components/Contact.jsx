@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { FiMail, FiGithub, FiFacebook, FiInstagram } from 'react-icons/fi'
+import { FiMail, FiGithub, FiFacebook, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -58,9 +58,9 @@ function Contact() {
         },
         {
             id: 3,
-            name: 'Facebook',
-            icon: FiFacebook,
-            href: 'https://facebook.com/profile.php?id=100095305896047',
+            name: 'LinkedIn',
+            icon: FiLinkedin,
+            href: 'https://linkedin.com/in/dava-ari-ardiansyah-57b33a34a',
         },
         {
             id: 4,
@@ -103,6 +103,9 @@ function Contact() {
                     <p
                         ref={textRef}
                         className="text-soft-gray text-base md:text-lg lg:text-xl leading-relaxed mb-10 md:mb-12 max-w-2xl"
+                        style={{
+                                padding: '10px',
+                            }}
                     >
                         Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya.
                     </p>

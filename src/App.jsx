@@ -35,7 +35,10 @@ function App() {
       <Projects />
       <Certificates />
       <Contact />
-      <footer className="py-16 md:py-24 flex items-center justify-center border-t border-glass-border">
+      <footer className="py-16 md:py-24 flex items-center justify-center border-t border-glass-border"
+        style={{
+          padding: '5px',
+        }}>
         <div className="max-w-6xl mx-auto text-center">
           <p className="font-mono text-sm text-soft-gray">
             © 2026 Dava Ari Ardiansyah. All rights reserved.

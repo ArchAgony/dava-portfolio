@@ -102,21 +102,30 @@ function About() {
                                 padding: '10px 14px',
                             }}
                         >
-                            <h3 className="font-display text-xl md:text-2xl font-semibold text-off-white mb-4">
+                            <h3 className="font-display text-xl md:text-2xl font-semibold text-off-white mb-4"
+                            style={{
+                                paddingLeft: '10px',
+                            }}>
                                 Salam Kenal!
                             </h3>
 
-                            <div className="space-y-4 text-soft-gray leading-relaxed text-sm md:text-base">
+                            <div className="space-y-4 text-soft-gray leading-relaxed text-sm md:text-base"
+                            style={{
+                                padding: '10px',
+                            }}>
                                 <p>
-                                    Saya seorang pengembang web yang bersemangat membangun aplikasi modern dan berskala besar. Dengan pengalaman dalam framework seperti Laravel dan React, saya berfokus pada pembuatan kode yang bersih, mudah dipelihara, dan berkinerja tinggi. Minat saya meliputi perancangan sistem backend yang andal hingga pembuatan antarmuka pengguna yang menarik. Di luar pemrograman, saya menikmati eksplorasi motion graphics dan desain kreatif untuk membawa ide-ide segar ke dalam proyek-proyek saya.
+                                    Saya seorang pengembang web yang bersemangat membangun aplikasi modern dan berskala besar. Dengan pengalaman dalam framework seperti Laravel dan React, saya berfokus pada pembuatan kode yang bersih, mudah dipelihara, dan berkinerja tinggi. Minat saya meliputi perancangan sistem backend yang andal hingga pembuatan antarmuka pengguna yang menarik.
                                 </p>
                             </div>
 
-                            <div className="mt-6 pt-5 border-t border-glass-border">
+                            <div className="space-y-4 border-t border-glass-border"
+                            style={{
+                                padding: '10px',
+                            }}>
                                 <div className="flex flex-wrap gap-3 md:gap-4">
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-cyan-glow" />
-                                        <span className="font-mono text-xs md:text-sm text-soft-gray">SMK Jurusan RPL</span>
+                                        <span className="font-mono text-xs md:text-sm text-soft-gray">Mahasiswa TI UB</span>
                                     </div>
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-electric-blue" />
