@@ -33,6 +33,23 @@ function Projects() {
             })
 
             gsap.fromTo(
+                cardsRef.current.filter(Boolean),
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.1, 
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            )
+
+            gsap.fromTo(
                 titleRef.current,
                 { y: 50, opacity: 0 },
                 {
@@ -65,6 +82,18 @@ function Projects() {
             description: 'Aplikasi buku tamu digital berbasis Laravel API dan React',
             image: Sibutadi
         },
+        // {
+        //     id: 3,
+        //     title: 'Headball',
+        //     description: 'Game 2d simpel berbasis Javascript DOM dan css',
+        //     image: Headball
+        // },
+        // {
+        //     id: 4,
+        //     title: 'Sibutadi',
+        //     description: 'Aplikasi buku tamu digital berbasis Laravel API dan React',
+        //     image: Sibutadi
+        // },
     ]
 
     return (

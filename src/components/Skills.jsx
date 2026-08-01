@@ -1,11 +1,14 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import ReactIcon from '../assets/React-icon.png'
+import VueIcon from '../assets/Vue-icon.png'
 import LaravelIcon from '../assets/Laravel-icon.png'
 import TailwindIcon from '../assets/Tailwind-icon.png'
 import MysqlIcon from '../assets/Mysql-icon.png'
 import GitIcon from '../assets/Git-icon.png'
+import PostmanIcon from '../assets/Postman-icon.png'
+import DockerIcon from '../assets/Docker-icon.png'
+import VercelIcon from '../assets/Vercel-icon.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,6 +20,7 @@ function Skills() {
     useEffect(() => {
         const ctx = gsap.context(() => {
             cardsRef.current.forEach((card, index) => {
+                if (!card) return;
                 gsap.fromTo(
                     card,
                     { y: 60, opacity: 0 },
@@ -34,6 +38,23 @@ function Skills() {
                     }
                 )
             })
+
+            gsap.fromTo(
+                cardsRef.current.filter(Boolean),
+                { y: 60, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.1, 
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: 'top 80%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            )
 
             gsap.fromTo(
                 titleRef.current,
@@ -56,11 +77,14 @@ function Skills() {
     }, [])
 
     const skills = [
-        { id: 1, name: 'React', image: ReactIcon },
-        { id: 2, name: 'Laravel', image: LaravelIcon },
-        { id: 3, name: 'Tailwind', image: TailwindIcon },
-        { id: 4, name: 'MySQL', image: MysqlIcon },
-        { id: 5, name: 'Git', image: GitIcon },
+        { id: 1, name: 'Laravel', image: LaravelIcon },
+        { id: 2, name: 'MySQL', image: MysqlIcon },
+        { id: 3, name: 'Vue', image: VueIcon },
+        { id: 4, name: 'Tailwind', image: TailwindIcon },
+        { id: 5, name: 'Postman', image: PostmanIcon },
+        { id: 6, name: 'Git', image: GitIcon },
+        { id: 7, name: 'Docker', image: DockerIcon },
+        { id: 8, name: 'Vercel', image: VercelIcon },
     ]
 
 
@@ -82,31 +106,24 @@ function Skills() {
                     <span className="gradient-text">Keahlian</span>
                 </h2>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+                <div
+                    className="grid grid-cols-4 gap-2 md:gap-3 w-full max-w-5xl mx-auto"
+                >
                     {skills.map((skill, index) => (
                         <div
-                            key={skill.id}
                             ref={(el) => (cardsRef.current[index] = el)}
-                            className="glass rounded-2xl p-5 md:p-6 lg:p-8 flex flex-col items-center justify-center gap-3 md:gap-4 hover:bg-electric-blue/10 transition-all duration-300 group cursor-pointer aspect-square"
+                            key={skill.id}
+                            className="glass rounded-2xl p-4 md:p-5 lg:p-6 flex flex-col items-center gap-2 md:gap-3 hover:bg-electric-blue/20 hover:glow transition-all duration-300 group cursor-pointer"
+                            style={{
+                                padding: '10px',
+                            }}
                         >
-                            <div className="
-    w-28 h-28
-    sm:w-32 sm:h-32
-    lg:w-36 lg:h-36
-    rounded-2xl
-    bg-gradient-to-br from-steel-blue/50 to-electric-blue/30
-    flex items-center justify-center
-    group-hover:scale-110 transition-transform duration-300
-  ">
-                                <span className="font-mono text-soft-gray text-xs">
-                                    <img
-                                        src={skill.image}
-                                        alt={skill.name}
-                                        className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain"
-                                    />
-                                </span>
-                            </div>
-                            <span className="font-mono text-sm md:text-base text-soft-gray group-hover:text-off-white transition-colors duration-300 text-center">
+                            <img
+                                src={skill.image}
+                                alt={skill.name}
+                                className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 object-contain group-hover:scale-110 transition-transform duration-300"
+                            />
+                            <span className="font-mono text-xs md:text-sm text-soft-gray group-hover:text-off-white transition-colors duration-300 text-center">
                                 {skill.name}
                             </span>
                         </div>
