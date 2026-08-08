@@ -91,13 +91,15 @@ function Hero() {
 
                     <div ref={ctaRef} className="mt-10 md:mt-12">
                         <a
-                            href="#about"
+                            href="/CV.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-block px-8 py-4 glass rounded-full font-medium text-off-white hover:bg-electric-blue/20 transition-all duration-300 glow"
                             style={{
-                                padding: '10px',
+                                padding: '10px 24px',
                             }}
                         >
-                            Lihat Lebih Lanjut
+                            Lihat CV
                         </a>
                     </div>
                 </div>
